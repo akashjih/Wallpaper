@@ -32,8 +32,27 @@
 
     /* Apply animation to specific elements */
     .animate-slideInFromRight {
-      animation: slideInFromRight 1s ease-out;
+      animation: slideInFromRight 2s ease-out;
     }
+
+
+    @keyframes slideInFromLeft {
+      from {
+        transform: translateX(-100%);
+        opacity: 0;
+      }
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+
+    /* Apply animation to specific elements */
+    .animate-slideInFromLeft {
+      animation: slideInFromLeft 1.5s ease-out;
+    }
+
+    
 
     /* Apply animation to specific elements */
     .animate-fadeInUp {
@@ -76,10 +95,45 @@
     </div>
   </nav>
 
+
+
+
+    <!-- Card with four photos -->
+    <div class="container mx-auto mt-8 px-4 lg:px-0 animate-slideInFromLeft">
+      <div class="bg-white border rounded-lg shadow-lg p-6 animate-slideInFromLeft">
+        <h2 class="text-2xl font-bold mb-4">Click a button to Download's All photo's if you want to a one pic then hold a pic and download</h2>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+          <!-- Photo 1 -->
+          <div>
+            <img src="https://th.bing.com/th/id/OIP.VQ3p_VkxFusvj3PZlAWWqgHaEo?rs=1&pid=ImgDetMain" alt="Photo 1" class="w-full">
+          </div>
+          <!-- Photo 2 -->
+          <div>
+            <img src="https://th.bing.com/th/id/R.4033acd535d6b4e68f61513d4ed258e5?rik=cWTENfyyVc%2fEDg&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fAreXU17.jpg&ehk=DCta9N2jO8d6iVsEFAxAstY%2bqt6q35DLjeOR4XFv5rk%3d&risl=&pid=ImgRaw&r=0" alt="Photo 2" class="w-full">
+          </div>
+          <!-- Photo 3 -->
+          <div>
+            <img src="https://wallpapercave.com/wp/emDr23u.jpg" alt="Photo 3" class="w-full">
+          </div>
+          <!-- Photo 4 -->
+          <div>
+            <img src="https://th.bing.com/th/id/R.d00a3acebd4bcab0ed342fb24a3c8aef?rik=gupFu52q9EkU1Q&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fTUrHKoG.jpg&ehk=dr5kKNMx8rg8rv8nNAkhWawONigbbmzOs9slDDF5xak%3d&risl=&pid=ImgRaw&r=0" alt="Photo 4" class="w-full">
+          </div>
+        </div>
+        <!-- Download Button -->
+        <div class="mt-6 text-center">
+          <button id="download-btn" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Download All Photos</button>
+        </div>
+      </div>
+    </div>
+
+
+
+
   
 <!-- Card -->
-<div class="container mx-auto mt-8 px-4 lg:px-0 animate-fadeInUp">
-    <div class="bg-white border  rounded-lg shadow-lg p-6 animate-fadeInUp">
+<div class="container mx-auto mt-8 px-4 lg:px-0 animate-slideInFromRight">
+    <div class="bg-white border  rounded-lg shadow-lg p-6 animate-slideInFromRight">
       <h2 class="text-2xl font-bold mb-4">Awesome Wallpaper</h2>
       <p class="text-gray-700 font-semibold">Wallpapers serve as a canvas for personal expression, transforming the blank backdrop of our digital devices and physical spaces into vibrant displays of personality and taste. Whether it's the serene landscape of a mountain range, the abstract swirl of colors, or the nostalgic allure of a vintage pattern, each wallpaper choice reflects a facet of our identity. They offer more than just aesthetic appeal; wallpapers can inspire creativity, evoke memories, and set the tone for our daily environment. In a digital age where screens dominate our visual field, a thoughtfully chosen wallpaper can provide a refreshing glimpse into a world of beauty and inspiration, making everyday interactions a little more delightful..</p>
       <button class="mt-4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Learn more</button>
