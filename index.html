@@ -129,6 +129,36 @@
   </div>
 
 
+   <!-- Card with four photos -->
+   <div class="container mx-auto mt-8 px-4 lg:px-0">
+    <div class="bg-white border rounded-lg shadow-lg p-6">
+      <h2 class="text-2xl font-bold mb-4">Download Photos</h2>
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <!-- Photo 1 -->
+        <div>
+          <img src="https://th.bing.com/th/id/OIP.VQ3p_VkxFusvj3PZlAWWqgHaEo?rs=1&pid=ImgDetMain" alt="Photo 1" class="w-full">
+        </div>
+        <!-- Photo 2 -->
+        <div>
+          <img src="https://th.bing.com/th/id/R.4033acd535d6b4e68f61513d4ed258e5?rik=cWTENfyyVc%2fEDg&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fAreXU17.jpg&ehk=DCta9N2jO8d6iVsEFAxAstY%2bqt6q35DLjeOR4XFv5rk%3d&risl=&pid=ImgRaw&r=0" alt="Photo 2" class="w-full">
+        </div>
+        <!-- Photo 3 -->
+        <div>
+          <img src="https://wallpapercave.com/wp/emDr23u.jpg" alt="Photo 3" class="w-full">
+        </div>
+        <!-- Photo 4 -->
+        <div>
+          <img src="https://th.bing.com/th/id/R.d00a3acebd4bcab0ed342fb24a3c8aef?rik=gupFu52q9EkU1Q&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fTUrHKoG.jpg&ehk=dr5kKNMx8rg8rv8nNAkhWawONigbbmzOs9slDDF5xak%3d&risl=&pid=ImgRaw&r=0" alt="Photo 4" class="w-full">
+        </div>
+      </div>
+      <!-- Download Button -->
+      <div class="mt-6 text-center">
+        <button id="download-btn" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Download All Photos</button>
+      </div>
+    </div>
+  </div>
+
+
    <!-- Footer -->
    <footer class="bg-gray-800 text-white p-4 text-center mt-8">
     <p>&copy; 2024 Awesome Wallpaper. All rights reserved.</p>
@@ -162,6 +192,29 @@
         rect.right <= (window.innerWidth || document.documentElement.clientWidth)
       );
     }
+
+
+
+
+
+
+     // Download photos button functionality
+     document.getElementById('download-btn').addEventListener('click', function() {
+      // Replace these placeholder URLs with the actual URLs of your photos
+      var photoUrls = [
+        'https://th.bing.com/th/id/OIP.VQ3p_VkxFusvj3PZlAWWqgHaEo?rs=1&pid=ImgDetMain',
+        'https://th.bing.com/th/id/R.4033acd535d6b4e68f61513d4ed258e5?rik=cWTENfyyVc%2fEDg&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fAreXU17.jpg&ehk=DCta9N2jO8d6iVsEFAxAstY%2bqt6q35DLjeOR4XFv5rk%3d&risl=&pid=ImgRaw&r=0',
+        'https://wallpapercave.com/wp/emDr23u.jpg',
+        'https://th.bing.com/th/id/R.d00a3acebd4bcab0ed342fb24a3c8aef?rik=gupFu52q9EkU1Q&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fTUrHKoG.jpg&ehk=dr5kKNMx8rg8rv8nNAkhWawONigbbmzOs9slDDF5xak%3d&risl=&pid=ImgRaw&r=0'
+      ];
+      // Create anchor element for each photo and trigger download
+      photoUrls.forEach(function(url) {
+        var anchor = document.createElement('a');
+        anchor.href = url;
+        anchor.download = url.split('/').pop();
+        anchor.click();
+      });
+    });
   </script>
 </body>
 </html>
